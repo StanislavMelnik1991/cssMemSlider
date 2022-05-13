@@ -17,53 +17,145 @@
 .image{
 
 }
+.textBox{
+    display: flex;
+    width: 90%;
+    align-items: flex-start;
+}
+.textBoxControls{
+    justify-content: space-between;
+}
+ 
+.text{
+    text-align: start;
+}
 .controls{
-    width: 15%;
     display: flex;
     justify-content: space-around;
-    margin: 0 auto;
 }
 .radio{
-    padding: 10px;
+    padding: 0.12rem;
+    cursor: pointer;  
+    margin: 0 auto; 
+    border: 0.12rem solid black;  
+    border-radius: 100%;   
+}
+label{
+    padding: 1rem;
+    display: inline-block;
     cursor: pointer;
-    fill: black;
 }
-.radio:hover{
-    fill: red;
-    transform: scale(1.3);
+label:hover .radio{
+    background-color: black;
 }
-.radio:active{
-    fill: rgb(18, 219, 18);
+label:active .radio{
+    background-color: black;
 }
-#btn0:checked ~ .slide{
-    transform: translateX(0vw);
+
+#btn0:checked ~ .slider .slide .image{
     transition: all .3s ease-in;
 }
-#btn1:checked ~ .slide{
+#btn0:checked ~ .slider .slide .text{
+    transition: all .3s ease-in;
+}
+#btn0:checked ~ .slider label:nth-of-type(1) .radio{
+    background-color: black;
+}
+
+#btn1:checked ~ .slider .slide .image{
     transform: translateX(-100vw);
     transition: all .3s ease-in;
 }
-#btn2:checked ~ .slide{
+#btn1:checked ~ .slider .slide .text{
+    transform: translateX(-100vw);
+    transition: all .3s ease-in;
+}
+#btn1:checked ~ .slider label:nth-of-type(2) .radio{
+    background-color: black;
+}
+
+#btn2:checked ~ .slider .slide .image{
     transform: translateX(-200vw);
     transition: all .3s ease-in;
 }
-#btn3:checked ~ .slide{
+#btn2:checked ~ .slider .slide .text{
+    transform: translateX(-200vw);
+    transition: all .3s ease-in;
+}
+#btn2:checked ~ .slider label:nth-of-type(3) .radio{
+    background-color: black;
+}
+
+#btn3:checked ~ .slider .slide .image{
     transform: translateX(-300vw);
     transition: all .3s ease-in;
 }
-#btn4:checked ~ .slide{
+#btn3:checked ~ .slider .slide .text{
+    transform: translateX(-300vw);
+    transition: all .3s ease-in;
+}
+#btn3:checked ~ .slider label:nth-of-type(4) .radio{
+    background-color: black;
+}
+
+#btn4:checked ~ .slider .slide .image{
     transform: translateX(-400vw);
     transition: all .3s ease-in;
 }
-#btn5:checked ~ .slide{
+#btn4:checked ~ .slider .slide .text{
+    transform: translateX(-400vw);
+    transition: all .3s ease-in;
+}
+#btn4:checked ~ .slider label:nth-of-type(5) .radio{
+    background-color: black;
+}
+
+#btn5:checked ~ .slider .slide .image{
     transform: translateX(-500vw);
     transition: all .3s ease-in;
 }
-#btn6:checked ~ .slide{
+#btn5:checked ~ .slider .slide .text{
+    transform: translateX(-500vw);
+    transition: all .3s ease-in;
+}
+#btn5:checked ~ .slider label:nth-of-type(6) .radio{
+    background-color: black;
+}
+
+#btn6:checked ~ .slider .slide .image{
     transform: translateX(-600vw);
     transition: all .3s ease-in;
 }
-#btn7:checked ~ .slide{
+#btn6:checked ~ .slider .slide .text{
+    transform: translateX(-600vw);
+    transition: all .3s ease-in;
+}
+#btn6:checked ~ .slider label:nth-of-type(7) .radio{
+    background-color: black;
+}
+
+#btn7:checked ~ .slider .slide .image{
     transform: translateX(-700vw);
     transition: all .3s ease-in;
+}
+#btn7:checked ~ .slider .slide .text{
+    transform: translateX(-700vw);
+    transition: all .3s ease-in;
+}
+#btn7:checked ~ .slider label:nth-of-type(8) .radio{
+    background-color: black;
+}
+@media (max-width: 768px) { 
+    .textBoxControls .text{
+        padding: 0;
+    }
+    .textBox{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .text{
+        padding-top: 2.5rem;
+        z-index: -1;
+    }
 }
