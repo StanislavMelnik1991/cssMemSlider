@@ -15,7 +15,13 @@
     flex-shrink: 0;
 }
 .image{
-
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.image img{
+    width: auto;
+    height: 50vh;
+    margin: 0 auto;
 }
 .textBox{
     display: flex;
@@ -28,6 +34,7 @@
  
 .text{
     text-align: start;
+    z-index: -1;
 }
 .controls{
     display: flex;
@@ -156,6 +163,5 @@ label:active .radio{
     }
     .text{
         padding-top: 2.5rem;
-        z-index: -1;
     }
 }
