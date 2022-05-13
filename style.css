@@ -1,7 +1,20 @@
+body{
+    font-family: 'Arial';
+    background: url(assets/background.jpg);
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+.background{
+    margin: -1rem auto 0;
+    padding: 2rem 0;
+    background-color: rgba(240, 248, 255, 0.8);
+    height: calc(100vh - 3rem);
+    width: 100%;
+}
 .slider{
     display: flex;
     overflow: hidden;
-
     width: 100%;
     margin: 0 auto;
 }
@@ -15,40 +28,49 @@
     flex-shrink: 0;
 }
 .image{
+    display: flex;
     overflow: hidden;
     flex-shrink: 0;
+    height: 50vh;
+    align-items: center;
 }
 .image img{
     width: auto;
-    height: 50vh;
+    max-width: calc(100vw - 1rem);
+    height: auto;
+    max-height: 50vh;
     margin: 0 auto;
+    border-radius: 0.8rem;
 }
 .textBox{
     display: flex;
     width: 90%;
     align-items: flex-start;
+    
 }
 .textBoxControls{
     justify-content: space-between;
 }
  
 .text{
+    width: calc(100vw - 20rem);
     text-align: start;
-    z-index: -1;
 }
 .controls{
+    z-index: 1;
+    margin-block-start: 1em;
     display: flex;
     justify-content: space-around;
 }
 .radio{
-    padding: 0.12rem;
+    padding: 0.2rem;
     cursor: pointer;  
     margin: 0 auto; 
     border: 0.12rem solid black;  
     border-radius: 100%;   
 }
 label{
-    padding: 1rem;
+    padding: 0.5rem;
     display: inline-block;
     cursor: pointer;
 }
@@ -57,6 +79,27 @@ label:hover .radio{
 }
 label:active .radio{
     background-color: black;
+}
+.disclaimer{
+    padding-top: 1vh;
+    padding-right: 2rem;
+    font-size: 0.7rem;
+    text-align: end;
+    color: black;
+}
+@media (max-width: 768px) { 
+    .textBoxControls .text{
+        padding: 0;
+    }
+    .textBox{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .text{
+        padding-top: 2.5rem;
+        width: auto;
+    }
 }
 
 #btn0:checked ~ .slider .slide .image{
@@ -152,16 +195,4 @@ label:active .radio{
 #btn7:checked ~ .slider label:nth-of-type(8) .radio{
     background-color: black;
 }
-@media (max-width: 768px) { 
-    .textBoxControls .text{
-        padding: 0;
-    }
-    .textBox{
-        display: flex;
-        align-items: center;
-        flex-direction: column-reverse;
-    }
-    .text{
-        padding-top: 2.5rem;
-    }
-}
+
