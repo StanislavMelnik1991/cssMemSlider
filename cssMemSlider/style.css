@@ -1,0 +1,200 @@
+body{
+    font-family: 'Arial';
+    background: url(assets/background.jpg);
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+.background{
+    margin: -1rem auto 0;
+    padding: 2rem 0;
+    background-color: rgba(240, 248, 255, 0.8);
+    height: calc(100vh - 3rem);
+    width: 100%;
+}
+.slider{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+.slide{
+    position: static;
+    display: flex;
+    width: 100vw;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+.image{
+    display: flex;
+    overflow: hidden;
+    flex-shrink: 0;
+    height: 50vh;
+    align-items: center;
+}
+.image img{
+    width: auto;
+    max-width: calc(100vw - 1rem);
+    height: auto;
+    max-height: 50vh;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+}
+.textBox{
+    display: flex;
+    width: 90%;
+    align-items: flex-start;
+    
+}
+.textBoxControls{
+    justify-content: space-between;
+}
+ 
+.text{
+    width: calc(100vw - 20rem);
+    text-align: start;
+}
+.controls{
+    z-index: 1;
+    margin-block-start: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+.radio{
+    padding: 0.2rem;
+    cursor: pointer;  
+    margin: 0 auto; 
+    border: 0.12rem solid black;  
+    border-radius: 100%;   
+}
+label{
+    padding: 0.6rem;
+    display: inline-block;
+    cursor: pointer;
+}
+label:hover .radio{
+    background-color: black;
+    transform: scale(1.3)
+}
+label:active .radio{
+    background-color: black;
+    transform: scale(1.5)
+}
+.disclaimer{
+    padding-top: 1vh;
+    padding-right: 2rem;
+    font-size: 0.7rem;
+    text-align: end;
+    color: black;
+}
+@media (max-width: 768px) { 
+    .textBoxControls .text{
+        padding: 0;
+    }
+    .textBox{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .text{
+        padding-top: 2.5rem;
+        width: auto;
+    }
+}
+
+#btn0:checked ~ .slider .slide .image{
+    transition: all .3s ease-in;
+}
+#btn0:checked ~ .slider .slide .text{
+    transition: all .3s ease-in;
+}
+#btn0:checked ~ .slider label:nth-of-type(1) .radio{
+    background-color: black;
+}
+
+#btn1:checked ~ .slider .slide .image{
+    transform: translateX(-100vw);
+    transition: all .3s ease-in;
+}
+#btn1:checked ~ .slider .slide .text{
+    transform: translateX(-100vw);
+    transition: all .3s ease-in;
+}
+#btn1:checked ~ .slider label:nth-of-type(2) .radio{
+    background-color: black;
+}
+
+#btn2:checked ~ .slider .slide .image{
+    transform: translateX(-200vw);
+    transition: all .3s ease-in;
+}
+#btn2:checked ~ .slider .slide .text{
+    transform: translateX(-200vw);
+    transition: all .3s ease-in;
+}
+#btn2:checked ~ .slider label:nth-of-type(3) .radio{
+    background-color: black;
+}
+
+#btn3:checked ~ .slider .slide .image{
+    transform: translateX(-300vw);
+    transition: all .3s ease-in;
+}
+#btn3:checked ~ .slider .slide .text{
+    transform: translateX(-300vw);
+    transition: all .3s ease-in;
+}
+#btn3:checked ~ .slider label:nth-of-type(4) .radio{
+    background-color: black;
+}
+
+#btn4:checked ~ .slider .slide .image{
+    transform: translateX(-400vw);
+    transition: all .3s ease-in;
+}
+#btn4:checked ~ .slider .slide .text{
+    transform: translateX(-400vw);
+    transition: all .3s ease-in;
+}
+#btn4:checked ~ .slider label:nth-of-type(5) .radio{
+    background-color: black;
+}
+
+#btn5:checked ~ .slider .slide .image{
+    transform: translateX(-500vw);
+    transition: all .3s ease-in;
+}
+#btn5:checked ~ .slider .slide .text{
+    transform: translateX(-500vw);
+    transition: all .3s ease-in;
+}
+#btn5:checked ~ .slider label:nth-of-type(6) .radio{
+    background-color: black;
+}
+
+#btn6:checked ~ .slider .slide .image{
+    transform: translateX(-600vw);
+    transition: all .3s ease-in;
+}
+#btn6:checked ~ .slider .slide .text{
+    transform: translateX(-600vw);
+    transition: all .3s ease-in;
+}
+#btn6:checked ~ .slider label:nth-of-type(7) .radio{
+    background-color: black;
+}
+
+#btn7:checked ~ .slider .slide .image{
+    transform: translateX(-700vw);
+    transition: all .3s ease-in;
+}
+#btn7:checked ~ .slider .slide .text{
+    transform: translateX(-700vw);
+    transition: all .3s ease-in;
+}
+#btn7:checked ~ .slider label:nth-of-type(8) .radio{
+    background-color: black;
+}
+
